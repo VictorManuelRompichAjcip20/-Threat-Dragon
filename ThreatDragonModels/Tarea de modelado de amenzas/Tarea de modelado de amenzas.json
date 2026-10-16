@@ -1,14 +1,14 @@
 {
   "summary": {
     "title": "AR-English - Modelo de amenazas",
-    "owner": "Wilson",
+    "owner":  "Victor Manuel Rompich Ajcip",
     "description": "Modelo de amenazas STRIDE de la aplicación AR-English (app Android AR, panel web, arenglish-api y proyecto Firebase). Maestría en Seguridad Informática, UMG.",
     "id": 0
   },
   "detail": {
     "contributors": [
       {
-        "name": "Wilson"
+        "name": "Victor Manuel Rompich Ajcip"
       }
     ],
     "diagrams": [
