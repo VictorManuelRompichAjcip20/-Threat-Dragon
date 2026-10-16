@@ -1,18 +1,3591 @@
 {
-  "version": "2.6.2",
-  "release_version": "",
-  "released_at": "2026-10-16",
   "summary": {
-    "title": "Tarea de modelado de amenzas",
-    "owner": "Victor Manuel",
-    "description": "",
+    "title": "AR-English - Modelo de amenazas",
+    "owner": "Wilson",
+    "description": "Modelo de amenazas STRIDE de la aplicación AR-English (app Android AR, panel web, arenglish-api y proyecto Firebase). Maestría en Seguridad Informática, UMG.",
     "id": 0
   },
   "detail": {
-    "contributors": [],
-    "diagrams": [],
-    "diagramTop": 0,
+    "contributors": [
+      {
+        "name": "Wilson"
+      }
+    ],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "DFD Nivel 0 - Contexto general de AR-English",
+        "diagramType": "STRIDE",
+        "placeholder": "Nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5",
+        "cells": [
+          {
+            "position": {
+              "x": 0,
+              "y": 118
+            },
+            "size": {
+              "width": 137,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Estudiante (A1)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "743804cd-e989-40e9-942f-123b7f06e096",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Estudiante (A1)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 648,
+              "y": 23
+            },
+            "size": {
+              "width": 137,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Docente / administrador"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "abb3f853-573a-42b2-aa12-1f51c7762537",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Docente / administrador",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 639,
+              "y": 114
+            },
+            "size": {
+              "width": 155,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Gemini API (Google)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "1154eba2-113e-43d8-8e19-9e0770c405aa",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Gemini API (Google)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 636,
+              "y": 219
+            },
+            "size": {
+              "width": 161,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Google Play Services para AR (ARCore)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "686da449-e301-46fe-bd17-22f33ee10a55",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Google Play Services para AR (ARCore)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 292,
+              "y": 107
+            },
+            "size": {
+              "width": 159,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "Sistema AR-English"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "b259343e-6229-4bd4-8565-fe05524c4273",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Process",
+              "name": "Sistema AR-English",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "ade742db-b702-4f24-8813-c61c30778da3",
+            "zIndex": 6,
+            "source": {
+              "cell": "743804cd-e989-40e9-942f-123b7f06e096"
+            },
+            "target": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C1 Credenciales e interacción AR"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C1 Credenciales e interacción AR",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "02248051-146c-471b-a224-bae8eae27dcd",
+            "zIndex": 7,
+            "source": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "target": {
+              "cell": "743804cd-e989-40e9-942f-123b7f06e096"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C2 Contenido AR y retroalimentación"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C2 Contenido AR y retroalimentación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "67c85e25-1841-4889-bf7a-75d3ac1ea7b5",
+            "zIndex": 8,
+            "source": {
+              "cell": "abb3f853-573a-42b2-aa12-1f51c7762537"
+            },
+            "target": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C3 Gestión de contenido"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C3 Gestión de contenido",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "8b91e0a6-495b-4518-a2d9-514d31adedcb",
+            "zIndex": 9,
+            "source": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "target": {
+              "cell": "abb3f853-573a-42b2-aa12-1f51c7762537"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C4 Reportes de progreso"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C4 Reportes de progreso",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "cdbe77e6-3e63-4479-bc07-8d1fb87ca809",
+            "zIndex": 10,
+            "source": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "target": {
+              "cell": "1154eba2-113e-43d8-8e19-9e0770c405aa"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C5 Solicitud de ejemplos"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C5 Solicitud de ejemplos",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "c87c0a5c-836f-4664-8a98-e6287fd3f38f",
+            "zIndex": 11,
+            "source": {
+              "cell": "1154eba2-113e-43d8-8e19-9e0770c405aa"
+            },
+            "target": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C6 Ejemplos generados"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C6 Ejemplos generados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "aa941ae1-6363-48d2-a04f-370112d34edd",
+            "zIndex": 12,
+            "source": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "target": {
+              "cell": "686da449-e301-46fe-bd17-22f33ee10a55"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C7 Solicitud de sesión AR"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C7 Solicitud de sesión AR",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "5258d800-9419-4c95-b239-45b30aeea273",
+            "zIndex": 13,
+            "source": {
+              "cell": "686da449-e301-46fe-bd17-22f33ee10a55"
+            },
+            "target": {
+              "cell": "b259343e-6229-4bd4-8565-fe05524c4273"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "C8 Seguimiento y planos detectados"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "C8 Seguimiento y planos detectados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "protocol": "",
+              "threats": []
+            }
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "title": "DFD Nivel 1 - Procesos, almacenes y límites de confianza",
+        "diagramType": "STRIDE",
+        "placeholder": "Nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5",
+        "cells": [
+          {
+            "position": {
+              "x": 920,
+              "y": 242
+            },
+            "size": {
+              "width": 227,
+              "height": 118
+            },
+            "attrs": {
+              "headerText": {
+                "text": "TB1 Dispositivo del estudiante"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "f8828375-4f62-4bef-be24-acb3f7c0058e",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB1 Dispositivo del estudiante",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 4,
+              "y": 142
+            },
+            "size": {
+              "width": 209,
+              "height": 118
+            },
+            "attrs": {
+              "headerText": {
+                "text": "TB2 Navegador del docente"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "485f5369-8f11-4f88-af29-797cd1531a40",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB2 Navegador del docente",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 395,
+              "y": 66
+            },
+            "size": {
+              "width": 376,
+              "height": 479
+            },
+            "attrs": {
+              "headerText": {
+                "text": "TB3 Proyecto Firebase arenglish-app (Google Cloud)"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "ed0c9281-786b-4ccb-8339-4d465f45fa60",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB3 Proyecto Firebase arenglish-app (Google Cloud)",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 0,
+              "y": 410
+            },
+            "size": {
+              "width": 218,
+              "height": 118
+            },
+            "attrs": {
+              "headerText": {
+                "text": "TB4 Hosting de arenglish-api"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "41bcd69f-f8ef-4c4e-b864-e05a010a2ba3",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB4 Hosting de arenglish-api",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1293,
+              "y": 284
+            },
+            "size": {
+              "width": 137,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Estudiante (A1)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "d461abe1-c301-4075-b7fc-8bc9e7556ef4",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Estudiante (A1)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "20dbc542-4a48-4e6d-a806-c56846ec5bfb",
+                  "title": "T20 Repudio de actividades por parte del estudiante",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Repudiation",
+                  "description": "Un estudiante podría negar haber realizado una actividad cuando no se conserva evidencia fiable de su ejecución.",
+                  "mitigation": "C17: Registro de auditoría centralizado de las operaciones administrativas. | C05: Gestión de sesiones: tokens de vida corta, revocación, cierre de sesión por inactividad y reautenticación en acciones sensibles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": "Bajo (2/16)"
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 514,
+              "y": 0
+            },
+            "size": {
+              "width": 137,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Docente / administrador"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "f80a83bf-5f7a-4056-9e43-000cb7c04876",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Docente / administrador",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 505,
+              "y": 570
+            },
+            "size": {
+              "width": 155,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Gemini API (Google)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "c081fbda-6cf3-4793-a2b6-ea149ebc1737",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Gemini API (Google)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "61b59de6-5188-4901-bf83-f833114c5a4a",
+                  "title": "T25 Envío de datos identificables de estudiantes a Gemini",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "El envío de datos a Gemini podría incluir información identificable de estudiantes si no se restringe el contenido del prompt.",
+                  "mitigation": "C22: Minimización de datos, seudonimización del estudiante y consentimiento institucional. | C16: Revisión docente obligatoria del contenido generado por IA (borrador-aprobado) y filtros de seguridad del modelo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": "Medio (3/16)"
+                }
+              ],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 958,
+              "y": 274
+            },
+            "size": {
+              "width": 151,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P1 App Android AR-English"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "d4cf03c0-88b7-41d3-915e-01360dbbc573",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Process",
+              "name": "P1 App Android AR-English",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "ed763144-fdea-49ed-bcfe-3e4215a8d944",
+                  "title": "T17 Ingeniería inversa del APK",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "El análisis estático del APK permitiría extraer configuración de Firebase u otros datos embebidos para facilitar ataques posteriores.",
+                  "mitigation": "C19: Ofuscación (R8/ProGuard), verificación de integridad con Play Integrity y distribución controlada. | C20: Almacenamiento seguro en el dispositivo (Keystore) y ausencia de secretos embebidos en el APK.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": "Medio (4/16)"
+                },
+                {
+                  "id": "16a31dda-8112-40a8-b437-1c82c25b3ed7",
+                  "title": "T18 APK repaquetado distribuido fuera de canales oficiales",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un APK repaquetado y distribuido por canales no oficiales podría capturar credenciales o alterar el progreso registrado.",
+                  "mitigation": "C19: Ofuscación (R8/ProGuard), verificación de integridad con Play Integrity y distribución controlada. | C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 4,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "7cdec6f8-8272-4e63-835c-12f6945cd29d",
+                  "title": "T19 Uso del backend por clientes no legítimos",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Clientes no legítimos (scripts, emuladores) podrían consumir los servicios de Firebase al no verificarse la autenticidad de la aplicación.",
+                  "mitigation": "C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API. | C19: Ofuscación (R8/ProGuard), verificación de integridad con Play Integrity y distribución controlada. | C12: Rate limiting y cuotas por usuario en arenglish-api.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 5,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "8ec317bd-d086-45a9-8a7b-83ff21480078",
+                  "title": "T23 Exposición de la privacidad por uso de la cámara",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "El acceso a la cámara para AR expone el entorno del estudiante; un manejo inadecuado de los fotogramas implicaría riesgos de privacidad para menores.",
+                  "mitigation": "C25: Permiso de cámara de mínimo alcance; fotogramas no almacenados ni transmitidos. | C22: Minimización de datos, seudonimización del estudiante y consentimiento institucional.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": "Medio (3/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 33,
+              "y": 174
+            },
+            "size": {
+              "width": 151,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P2 Panel web de administración"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "29f68acc-f51c-49c8-92eb-e28006c7cb2d",
+            "zIndex": 9,
+            "data": {
+              "type": "tm.Process",
+              "name": "P2 Panel web de administración",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "46fcd24a-f164-45ad-8d79-d6d2cf98bb6a",
+                  "title": "T12 Cross-Site Scripting (XSS) en el panel web",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Campos de vocabulario o ejemplos con código malicioso podrían ejecutarse en el navegador del docente si no se codifica la salida ni se restringe el contenido.",
+                  "mitigation": "C07: Codificación de salida y Content Security Policy en el panel web. | C06: Validación y saneamiento de entradas en cliente y servidor mediante esquemas con lista blanca de campos. | C05: Gestión de sesiones: tokens de vida corta, revocación, cierre de sesión por inactividad y reautenticación en acciones sensibles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "e9b5d628-f132-44fa-8381-46daf7e58ffb",
+                  "title": "T27 Secuestro de la sesión del docente",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un script malicioso o un equipo compartido podría permitir el robo del token de sesión del docente y su reutilización.",
+                  "mitigation": "C05: Gestión de sesiones: tokens de vida corta, revocación, cierre de sesión por inactividad y reautenticación en acciones sensibles. | C07: Codificación de salida y Content Security Policy en el panel web. | C02: Autenticación multifactor obligatoria para docentes y administradores. | C13: CORS con lista blanca, HTTPS/TLS con HSTS y cabeceras de seguridad (helmet).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": "Alto (6/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": true,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 33,
+              "y": 442
+            },
+            "size": {
+              "width": 151,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3 Servicio arenglish-api"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe",
+            "zIndex": 10,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3 Servicio arenglish-api",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "dc53bbd8-3e23-4278-9791-4e65cb66fd22",
+                  "title": "T09 Agotamiento de la cuota de Gemini por abuso del endpoint de generación",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "La ausencia de límites de tasa en el endpoint de generación permitiría que un usuario autenticado, o un atacante con un token robado, agote la cuota gratuita y degrade el servicio.",
+                  "mitigation": "C12: Rate limiting y cuotas por usuario en arenglish-api. | C15: Llamadas a Gemini exclusivamente desde el servidor; clave restringida por API y con cuota limitada. | C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "13f05e7c-968d-4887-ab73-0c4b08e0f924",
+                  "title": "T22 Vulnerabilidades en dependencias de terceros",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Vulnerabilidades en bibliotecas (SceneView, ARCore, SDK de Firebase, paquetes npm) podrían ser explotadas a través de la cadena de suministro.",
+                  "mitigation": "C21: Análisis de composición de software (Dependabot, npm audit, OWASP Dependency-Check) y lockfiles.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "fa509c51-e396-4c8b-ac81-658d1b6a9c1d",
+                  "title": "T28 Indisponibilidad por suspensión del plan gratuito del hosting",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "La suspensión por inactividad o el agotamiento de recursos del plan gratuito del hosting dejaría sin servicio las funciones administrativas.",
+                  "mitigation": "C24: Exportaciones programadas de Firestore y plan de contingencia del hosting. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "Medio (3/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 507,
+              "y": 278
+            },
+            "size": {
+              "width": 151,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P4 Firebase Authentication"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "8575d612-1407-43ec-9422-143e02f4e18d",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "P4 Firebase Authentication",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "0e00f4dd-7396-4de8-a933-8fcd11b19595",
+                  "title": "T01 Credential stuffing y fuerza bruta sobre el inicio de sesión",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Las credenciales de estudiantes y docentes pueden obtenerse mediante reutilización de contraseñas filtradas o ataques automatizados contra el servicio de autenticación, lo que permite suplantar a los usuarios.",
+                  "mitigation": "C01: Política de contraseñas robusta y verificación de correo electrónico en Firebase Authentication. | C02: Autenticación multifactor obligatoria para docentes y administradores. | C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API. | C04: Límite de intentos de acceso y mensajes de error genéricos (sin enumeración de usuarios). | C28: reCAPTCHA y bloqueo progresivo en la autenticación.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "Crítico (9/16)"
+                },
+                {
+                  "id": "25101e17-e1d9-4670-a51c-ebcf61e95296",
+                  "title": "T24 Bloqueo abusivo de cuentas",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "Intentos fallidos deliberados contra la cuenta de otro usuario podrían activar bloqueos temporales y negarle el acceso.",
+                  "mitigation": "C28: reCAPTCHA y bloqueo progresivo en la autenticación. | C04: Límite de intentos de acceso y mensajes de error genéricos (sin enumeración de usuarios).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "Bajo (2/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 507,
+              "y": 472
+            },
+            "size": {
+              "width": 152,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D1 Usuarios y roles"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "e6fe30cd-9e7b-46c7-9b14-48dd5363bdde",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Store",
+              "name": "D1 Usuarios y roles",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "6608362c-bdec-4813-97d9-b81efaa271b3",
+                  "title": "T04 Reglas de Firestore permisivas permiten modificar el propio rol",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Reglas de Firestore permisivas podrían permitir que un cliente modifique su propio documento de usuario, incluido el campo de rol, y escale privilegios sin intervención de la API.",
+                  "mitigation": "C10: Reglas de seguridad de Firestore de mínimo privilegio, con campos inmutables y validación de esquema. | C09: Control de acceso basado en roles con custom claims y verificación de propiedad del recurso. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "Crítico (12/16)"
+                }
+              ],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 511,
+              "y": 382
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D2 Categorías y vocabulario"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "9deddd42-60c8-4708-915c-703a0ad10d31",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Store",
+              "name": "D2 Categorías y vocabulario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "885c5ea2-1b44-4af8-b2bf-96991f693bf0",
+                  "title": "T10 Agotamiento de cuotas de lectura/escritura de Firestore",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Consultas masivas o bucles de lectura podrían agotar las cuotas diarias de Firestore del plan sin costo y dejar la aplicación sin disponibilidad.",
+                  "mitigation": "C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota). | C10: Reglas de seguridad de Firestore de mínimo privilegio, con campos inmutables y validación de esquema.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "Medio (4/16)"
+                }
+              ],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 511,
+              "y": 188
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D3 Progreso de aprendizaje"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "6c63fdd8-fe2d-4027-8aca-ed069a4b606f",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Store",
+              "name": "D3 Progreso de aprendizaje",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "39cd032f-4485-4835-a934-229af3d728f0",
+                  "title": "T05 Alteración del progreso de aprendizaje desde un cliente manipulado",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un cliente manipulado (APK modificado o llamadas directas al SDK) podría escribir valores arbitrarios en el progreso de aprendizaje, con lo cual se comprometería la integridad de los datos empleados para medir retención y comprensión contextual.",
+                  "mitigation": "C23: Validación de consistencia del progreso en reglas o API y registro de eventos append-only. | C10: Reglas de seguridad de Firestore de mínimo privilegio, con campos inmutables y validación de esquema. | C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API. | C17: Registro de auditoría centralizado de las operaciones administrativas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "Crítico (9/16)"
+                },
+                {
+                  "id": "41b55eb1-eeb4-4956-a784-c153f6385e36",
+                  "title": "T06 Lectura del progreso de otros estudiantes (datos de menores)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Reglas de lectura insuficientes podrían exponer el progreso de otros estudiantes, información asociada a menores de edad.",
+                  "mitigation": "C10: Reglas de seguridad de Firestore de mínimo privilegio, con campos inmutables y validación de esquema. | C22: Minimización de datos, seudonimización del estudiante y consentimiento institucional. | C09: Control de acceso basado en roles con custom claims y verificación de propiedad del recurso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "Alto (8/16)"
+                }
+              ],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 511,
+              "y": 98
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D4 Cloud Storage (recursos AR)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "05e3a3ba-c942-45b7-807c-c1575c271bf4",
+            "zIndex": 15,
+            "data": {
+              "type": "tm.Store",
+              "name": "D4 Cloud Storage (recursos AR)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "371a1449-86e9-4d0d-b73b-24e693051330",
+                  "title": "T15 Carga o sustitución de recursos maliciosos en Storage",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Reglas de Storage laxas permitirían subir o reemplazar modelos 3D, imágenes o audio con contenido alterado o malicioso que luego se descargaría en los dispositivos de los estudiantes.",
+                  "mitigation": "C11: Reglas de Storage restrictivas con validación de tipo MIME y tamaño. | C06: Validación y saneamiento de entradas en cliente y servidor mediante esquemas con lista blanca de campos.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "Alto (6/16)"
+                },
+                {
+                  "id": "5391dd78-6a37-4b10-a12b-d116c97002f3",
+                  "title": "T16 Acceso público a recursos educativos de Storage",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Recursos accesibles mediante URL públicas permitirían su descarga masiva sin autenticación.",
+                  "mitigation": "C11: Reglas de Storage restrictivas con validación de tipo MIME y tamaño. | C22: Minimización de datos, seudonimización del estudiante y consentimiento institucional.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "Medio (3/16)"
+                }
+              ],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "9eb61005-4acf-46e9-80a1-02a7912ee6a0",
+            "zIndex": 16,
+            "source": {
+              "cell": "d461abe1-c301-4075-b7fc-8bc9e7556ef4"
+            },
+            "target": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F1 Interacción y respuestas"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F1 Interacción y respuestas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Local (UI/ARCore)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "8c2b73ef-3d58-490e-ba1d-b4e977f8034e",
+            "zIndex": 17,
+            "source": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "target": {
+              "cell": "d461abe1-c301-4075-b7fc-8bc9e7556ef4"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F2 Contenido AR y retroalimentación"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F2 Contenido AR y retroalimentación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Local (UI/ARCore)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "75998265-00e3-4337-9713-c86032987068",
+            "zIndex": 18,
+            "source": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "target": {
+              "cell": "8575d612-1407-43ec-9422-143e02f4e18d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F3 Credenciales de acceso"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F3 Credenciales de acceso",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "26a46ccd-c349-4e6e-9726-58c9576fe2fa",
+            "zIndex": 19,
+            "source": {
+              "cell": "8575d612-1407-43ec-9422-143e02f4e18d"
+            },
+            "target": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F4 ID token y sesión"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F4 ID token y sesión",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "5a352aab-cccf-44e6-9b58-0170ec078b76",
+            "zIndex": 20,
+            "source": {
+              "cell": "e6fe30cd-9e7b-46c7-9b14-48dd5363bdde"
+            },
+            "target": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F22 Perfil y rol"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F22 Perfil y rol",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS (SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "f5b952e8-5f35-4f82-b061-534a72fc9497",
+            "zIndex": 21,
+            "source": {
+              "cell": "9deddd42-60c8-4708-915c-703a0ad10d31"
+            },
+            "target": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F5 Vocabulario y categorías"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F5 Vocabulario y categorías",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS (SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "8c84470f-3ce2-413f-8b34-d0f1753c1c20",
+            "zIndex": 22,
+            "source": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "target": {
+              "cell": "6c63fdd8-fe2d-4027-8aca-ed069a4b606f"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F6 Registro de progreso"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F6 Registro de progreso",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS (SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "774b027e-dfd5-4870-8812-f06284d5398f",
+            "zIndex": 23,
+            "source": {
+              "cell": "05e3a3ba-c942-45b7-807c-c1575c271bf4"
+            },
+            "target": {
+              "cell": "d4cf03c0-88b7-41d3-915e-01360dbbc573"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F7 Modelos 3D, imágenes y audio"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F7 Modelos 3D, imágenes y audio",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "f4ef5498-1150-493b-9eb0-b9779aaa34e9",
+            "zIndex": 24,
+            "source": {
+              "cell": "f80a83bf-5f7a-4056-9e43-000cb7c04876"
+            },
+            "target": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F8 Operaciones de gestión"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F8 Operaciones de gestión",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Navegador",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "4ab84718-1863-4622-9bfb-a9c020e831f2",
+            "zIndex": 25,
+            "source": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "target": {
+              "cell": "8575d612-1407-43ec-9422-143e02f4e18d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F9 Credenciales del docente"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F9 Credenciales del docente",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "e067f6f3-34e3-408e-985c-fbb4616f5a0a",
+            "zIndex": 26,
+            "source": {
+              "cell": "8575d612-1407-43ec-9422-143e02f4e18d"
+            },
+            "target": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F10 ID token del docente"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F10 ID token del docente",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "50ed543f-36ac-4f79-b250-bc2d8b541353",
+            "zIndex": 27,
+            "source": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "target": {
+              "cell": "9deddd42-60c8-4708-915c-703a0ad10d31"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F11 CRUD de vocabulario"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F11 CRUD de vocabulario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS (SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "db5945a9-3593-48a0-98e6-a7d40ae3948e",
+            "zIndex": 28,
+            "source": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "target": {
+              "cell": "05e3a3ba-c942-45b7-807c-c1575c271bf4"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F12 Carga de recursos"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F12 Carga de recursos",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "e26aca62-8d3c-450f-9d96-fe47340c6d5f",
+            "zIndex": 29,
+            "source": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "target": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F13 Solicitudes con ID token"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F13 Solicitudes con ID token",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "id": "7fb961f3-6943-46f0-9a4f-b56a8bdf13b6",
+                  "title": "T14 CORS permisivo o tráfico sin cifrado en la API",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Una configuración permisiva de CORS o la aceptación de tráfico sin TLS expondría tokens y datos en tránsito.",
+                  "mitigation": "C13: CORS con lista blanca, HTTPS/TLS con HSTS y cabeceras de seguridad (helmet). | C03: Firebase App Check (Play Integrity y reCAPTCHA) en la app, el panel y la API.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "Medio (4/16)"
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "e01f2491-3d1a-4d36-b14e-2a0b02fbb77b",
+            "zIndex": 30,
+            "source": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "target": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F14 Respuestas y ejemplos en borrador"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F14 Respuestas y ejemplos en borrador",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "aeb8b683-155c-434a-9058-329e85dd0f8e",
+            "zIndex": 31,
+            "source": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "target": {
+              "cell": "8575d612-1407-43ec-9422-143e02f4e18d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F15 Verificación de token"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F15 Verificación de token",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS (Admin SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "157fc3c2-3d0c-4b81-8493-2d6269e47cc8",
+            "zIndex": 32,
+            "source": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "target": {
+              "cell": "e6fe30cd-9e7b-46c7-9b14-48dd5363bdde"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F16 Gestión de usuarios y roles"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F16 Gestión de usuarios y roles",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS (Admin SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "c6d5a855-d771-4563-b55f-7c0c8c24075f",
+            "zIndex": 33,
+            "source": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "target": {
+              "cell": "9deddd42-60c8-4708-915c-703a0ad10d31"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F17 Persistencia de vocabulario"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F17 Persistencia de vocabulario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS (Admin SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "6280878a-3ec4-4ed5-9151-1e7900202a07",
+            "zIndex": 34,
+            "source": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "target": {
+              "cell": "c081fbda-6cf3-4793-a2b6-ea149ebc1737"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F18 Prompt con API key"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F18 Prompt con API key",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": [
+                {
+                  "id": "676a45c6-f8c8-4bed-985c-4381ff820fb8",
+                  "title": "T07 Exposición de la API key de Gemini",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "La clave de la API de Gemini podría quedar expuesta si se embebe en la aplicación móvil, en el bundle del panel web o en el repositorio, lo que permitiría su uso fraudulento y el agotamiento de la cuota gratuita.",
+                  "mitigation": "C15: Llamadas a Gemini exclusivamente desde el servidor; clave restringida por API y con cuota limitada. | C14: Gestión de secretos fuera del repositorio, con escaneo automatizado (gitleaks) y rotación. | C20: Almacenamiento seguro en el dispositivo (Keystore) y ausencia de secretos embebidos en el APK. | C12: Rate limiting y cuotas por usuario en arenglish-api.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "Crítico (9/16)"
+                }
+              ]
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "6f20ed30-4b8e-4d01-b2e6-1d8c49158697",
+            "zIndex": 35,
+            "source": {
+              "cell": "c081fbda-6cf3-4793-a2b6-ea149ebc1737"
+            },
+            "target": {
+              "cell": "1ebcd9a7-6cc5-4e1b-9e1b-a7950de202fe"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F19 Ejemplos generados"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F19 Ejemplos generados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "d2d1488e-8ba0-4e32-bc06-e7b32ee38fc8",
+            "zIndex": 36,
+            "source": {
+              "cell": "6c63fdd8-fe2d-4027-8aca-ed069a4b606f"
+            },
+            "target": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F20 Progreso para reportes"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F20 Progreso para reportes",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS (SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "a98a5d0f-e562-4215-9c18-abfa911e3878",
+            "zIndex": 37,
+            "source": {
+              "cell": "29f68acc-f51c-49c8-92eb-e28006c7cb2d"
+            },
+            "target": {
+              "cell": "f80a83bf-5f7a-4056-9e43-000cb7c04876"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "F21 Reportes y vistas"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "F21 Reportes y vistas",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Navegador",
+              "threats": []
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "DFD Nivel 2 - Descomposición del servicio arenglish-api (P3)",
+        "diagramType": "STRIDE",
+        "placeholder": "Nuevo diagrama STRIDE",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5",
+        "cells": [
+          {
+            "position": {
+              "x": 8,
+              "y": 247
+            },
+            "size": {
+              "width": 1813,
+              "height": 285
+            },
+            "attrs": {
+              "headerText": {
+                "text": "TB4 Hosting de arenglish-api"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "ea17bc18-e57d-48a2-92bb-4bd8ec14573f",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB4 Hosting de arenglish-api",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1373,
+              "y": 540
+            },
+            "size": {
+              "width": 152,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Panel web de administración (P2)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "3efcd779-0f8c-446c-9d26-7ad686a3e3fd",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Panel web de administración (P2)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 357,
+              "y": 639
+            },
+            "size": {
+              "width": 150,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Firebase Authentication (P4)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "3b5a500e-96c9-426b-91da-59e18472ce79",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Firebase Authentication (P4)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 1371,
+              "y": 181
+            },
+            "size": {
+              "width": 155,
+              "height": 58
+            },
+            "attrs": {
+              "text": {
+                "text": "Gemini API (Google)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "id": "4b909289-a883-452d-90d9-f7f52a8f87ec",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Gemini API (Google)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "providesAuthentication": false
+            }
+          },
+          {
+            "position": {
+              "x": 1373,
+              "y": 0
+            },
+            "size": {
+              "width": 152,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D1 Usuarios y roles"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "5b4059d1-8440-4bdc-a67f-1f18761ac4a8",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Store",
+              "name": "D1 Usuarios y roles",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 1377,
+              "y": 90
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D2 Categorías y vocabulario"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "cb23c658-43f7-40e2-ad75-b3768970de15",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Store",
+              "name": "D2 Categorías y vocabulario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 16,
+              "y": 445
+            },
+            "size": {
+              "width": 167,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.1 Autenticación (verifyIdToken)"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "124ecdc5-b9f6-4995-99b5-e214cec4edcb",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.1 Autenticación (verifyIdToken)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "aa493e7d-4a6a-43f8-bacd-3c308753a47b",
+                  "title": "T02 Omisión de la verificación del ID token en rutas de la API",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Algunas rutas de arenglish-api podrían aceptar solicitudes sin verificar el ID token, o con tokens vencidos o revocados, dado que el servicio no depende de las reglas de seguridad del SDK cliente.",
+                  "mitigation": "C08: Verificación del ID token con el Admin SDK (checkRevoked) en todas las rutas. | C09: Control de acceso basado en roles con custom claims y verificación de propiedad del recurso. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "Alto (8/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 338,
+              "y": 336
+            },
+            "size": {
+              "width": 189,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.2 Autorización por rol"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "7d01762f-07a3-4c32-9b9b-c1ad49cd9f82",
+            "zIndex": 8,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.2 Autorización por rol",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "58ca9e3c-fd67-4f0f-84fd-d7c9343503f7",
+                  "title": "T03 Fallo de autorización interna con Admin SDK (escalamiento a docente o administrador)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Debido a que arenglish-api accede a Firestore mediante el Admin SDK, las reglas de seguridad son omitidas; cualquier fallo en la autorización interna (rol o propiedad del recurso) permitiría que un estudiante ejecute operaciones privilegiadas.",
+                  "mitigation": "C09: Control de acceso basado en roles con custom claims y verificación de propiedad del recurso. | C08: Verificación del ID token con el Admin SDK (checkRevoked) en todas las rutas. | C17: Registro de auditoría centralizado de las operaciones administrativas. | C27: Separación de entornos (desarrollo y producción) e IAM de mínimo privilegio para la cuenta de servicio.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "Crítico (12/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 640,
+              "y": 278
+            },
+            "size": {
+              "width": 153,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.3 Validación y saneamiento"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "2902b9e3-e02f-43b2-9b9f-15c617b1c6aa",
+            "zIndex": 9,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.3 Validación y saneamiento",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "edb3908b-f6d1-41e7-83c1-8dc15c7bbdb0",
+                  "title": "T13 Parámetros sin validar en la API",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Parámetros no validados (tipos, longitudes, campos adicionales) permitirían inyectar campos no previstos o corromper documentos en Firestore.",
+                  "mitigation": "C06: Validación y saneamiento de entradas en cliente y servidor mediante esquemas con lista blanca de campos. | C13: CORS con lista blanca, HTTPS/TLS con HSTS y cabeceras de seguridad (helmet). | C09: Control de acceso basado en roles con custom claims y verificación de propiedad del recurso.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "Medio (4/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 972,
+              "y": 388
+            },
+            "size": {
+              "width": 184,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.4 Orquestador de generación con IA"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5",
+            "zIndex": 10,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.4 Orquestador de generación con IA",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "a5ca9cb8-4230-410d-88c0-0d15100dc5fe",
+                  "title": "T08 Contenido inapropiado o inyección de instrucciones en la generación con IA",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Entradas manipuladas (inyección de instrucciones) o respuestas inadecuadas del modelo podrían producir ejemplos ofensivos o incorrectos que, una vez persistidos, serían mostrados a estudiantes menores de edad.",
+                  "mitigation": "C16: Revisión docente obligatoria del contenido generado por IA (borrador-aprobado) y filtros de seguridad del modelo. | C06: Validación y saneamiento de entradas en cliente y servidor mediante esquemas con lista blanca de campos. | C17: Registro de auditoría centralizado de las operaciones administrativas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "Alto (6/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 987,
+              "y": 283
+            },
+            "size": {
+              "width": 154,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.5 Persistencia (Admin SDK)"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "80924d84-bd2d-4dfc-9659-b05a0fd33ced",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.5 Persistencia (Admin SDK)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "threats": [],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 1373,
+              "y": 420
+            },
+            "size": {
+              "width": 151,
+              "height": 79
+            },
+            "attrs": {
+              "text": {
+                "text": "P3.6 Auditoría y registro"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "id": "2acc4eed-55d1-4a46-ad81-e807942a62d2",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Process",
+              "name": "P3.6 Auditoría y registro",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "01fba812-896a-4259-a11d-f4e3099638b9",
+                  "title": "T11 Ausencia de trazabilidad de operaciones administrativas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Repudiation",
+                  "description": "Sin registros de auditoría, las operaciones administrativas (alta o modificación de vocabulario, cambios de rol) no podrían atribuirse a un usuario concreto.",
+                  "mitigation": "C17: Registro de auditoría centralizado de las operaciones administrativas. | C26: Almacenamiento de auditoría de solo anexar con retención y acceso restringido. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "Alto (6/16)"
+                }
+              ],
+              "privilegeLevel": "",
+              "isWebApplication": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "storesCredentials": false
+            }
+          },
+          {
+            "position": {
+              "x": 644,
+              "y": 382
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D5 Secretos y configuración"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "0a1bd612-3464-4c6a-8c80-8bb415838407",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Store",
+              "name": "D5 Secretos y configuración",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "f47dcee0-dd55-4a3f-aea7-ff6dba8ba530",
+                  "title": "T21 Fuga de credenciales de la cuenta de servicio del Admin SDK",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Las credenciales de la cuenta de servicio podrían filtrarse mediante el repositorio, los registros o la configuración del hosting, con acceso total a Firestore y Storage.",
+                  "mitigation": "C14: Gestión de secretos fuera del repositorio, con escaneo automatizado (gitleaks) y rotación. | C27: Separación de entornos (desarrollo y producción) e IAM de mínimo privilegio para la cuenta de servicio. | C18: Alertamiento ante anomalías (fallos de autenticación, picos de uso, cambios de rol y de cuota).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 27,
+                  "score": "Alto (8/16)"
+                }
+              ],
+              "isALog": false,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": true,
+              "storesInventory": false
+            }
+          },
+          {
+            "position": {
+              "x": 1669,
+              "y": 427
+            },
+            "size": {
+              "width": 144,
+              "height": 65
+            },
+            "attrs": {
+              "text": {
+                "text": "D6 Registro de auditoría"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "store",
+            "id": "083eb809-9e18-4c2f-8a94-ec463b939429",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Store",
+              "name": "D6 Registro de auditoría",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "threats": [
+                {
+                  "id": "9f9d1d66-49e3-47f5-9ca8-ab8bbba90ad6",
+                  "title": "T26 Alteración o eliminación de registros de auditoría",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Tampering",
+                  "description": "Un actor con acceso al hosting podría alterar o eliminar registros de auditoría para ocultar su actividad.",
+                  "mitigation": "C26: Almacenamiento de auditoría de solo anexar con retención y acceso restringido. | C17: Registro de auditoría centralizado de las operaciones administrativas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 28,
+                  "score": "Bajo (2/16)"
+                }
+              ],
+              "isALog": true,
+              "isEncrypted": true,
+              "isSigned": false,
+              "storesCredentials": false,
+              "storesInventory": false
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "e06479f9-ac84-4c55-97db-954f58566728",
+            "zIndex": 15,
+            "source": {
+              "cell": "3efcd779-0f8c-446c-9d26-7ad686a3e3fd"
+            },
+            "target": {
+              "cell": "124ecdc5-b9f6-4995-99b5-e214cec4edcb"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S1 Solicitud con token Bearer"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S1 Solicitud con token Bearer",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "1e3b2025-ab6a-41f7-a0b6-8dac5555a322",
+            "zIndex": 16,
+            "source": {
+              "cell": "124ecdc5-b9f6-4995-99b5-e214cec4edcb"
+            },
+            "target": {
+              "cell": "3b5a500e-96c9-426b-91da-59e18472ce79"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S2 Verificación del ID token"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S2 Verificación del ID token",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "a14ef1f2-b00c-4c8b-ae66-4ad504be5faf",
+            "zIndex": 17,
+            "source": {
+              "cell": "124ecdc5-b9f6-4995-99b5-e214cec4edcb"
+            },
+            "target": {
+              "cell": "7d01762f-07a3-4c32-9b9b-c1ad49cd9f82"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S3 Identidad verificada (uid, rol)"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S3 Identidad verificada (uid, rol)",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "dce8a137-7c34-4054-b962-a4d05a0c47eb",
+            "zIndex": 18,
+            "source": {
+              "cell": "7d01762f-07a3-4c32-9b9b-c1ad49cd9f82"
+            },
+            "target": {
+              "cell": "2902b9e3-e02f-43b2-9b9f-15c617b1c6aa"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S4 Solicitud autorizada"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S4 Solicitud autorizada",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "81756dbf-498e-483b-b520-47c9ed375105",
+            "zIndex": 19,
+            "source": {
+              "cell": "2902b9e3-e02f-43b2-9b9f-15c617b1c6aa"
+            },
+            "target": {
+              "cell": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S5 Parámetros de generación"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S5 Parámetros de generación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "e52decbd-f1f6-4131-aef3-415579ceeb3f",
+            "zIndex": 20,
+            "source": {
+              "cell": "2902b9e3-e02f-43b2-9b9f-15c617b1c6aa"
+            },
+            "target": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S6 Datos validados"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S6 Datos validados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "ab1f0cfb-4a24-42a4-98ff-a3afdd5db613",
+            "zIndex": 21,
+            "source": {
+              "cell": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5"
+            },
+            "target": {
+              "cell": "4b909289-a883-452d-90d9-f7f52a8f87ec"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S7 Prompt con API key"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S7 Prompt con API key",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "d664d4ad-4e54-481c-8223-4f75672d5360",
+            "zIndex": 22,
+            "source": {
+              "cell": "4b909289-a883-452d-90d9-f7f52a8f87ec"
+            },
+            "target": {
+              "cell": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S8 Ejemplos generados"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S8 Ejemplos generados",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "39a62a77-aa6d-4f0b-be2c-8574cfb8e715",
+            "zIndex": 23,
+            "source": {
+              "cell": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5"
+            },
+            "target": {
+              "cell": "3efcd779-0f8c-446c-9d26-7ad686a3e3fd"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S9 Ejemplos en borrador"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S9 Ejemplos en borrador",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "be712052-85f8-4748-818b-45106a31d05c",
+            "zIndex": 24,
+            "source": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "target": {
+              "cell": "cb23c658-43f7-40e2-ad75-b3768970de15"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S10 Escritura de vocabulario"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S10 Escritura de vocabulario",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS (Admin SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "17c6d2f8-cba1-47d1-9525-aa943cef14ad",
+            "zIndex": 25,
+            "source": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "target": {
+              "cell": "5b4059d1-8440-4bdc-a67f-1f18761ac4a8"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S11 Escritura de usuarios y roles"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S11 Escritura de usuarios y roles",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "HTTPS (Admin SDK)",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "bf6ebbe8-0e1d-4388-b8aa-e1466b5cd327",
+            "zIndex": 26,
+            "source": {
+              "cell": "0a1bd612-3464-4c6a-8c80-8bb415838407"
+            },
+            "target": {
+              "cell": "ea72babb-ac34-45d1-bb93-8bd4ba6963a5"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S12 API key de Gemini"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S12 API key de Gemini",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "ecb3fdcf-3aa3-40ac-b611-ceebeb400683",
+            "zIndex": 27,
+            "source": {
+              "cell": "0a1bd612-3464-4c6a-8c80-8bb415838407"
+            },
+            "target": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S13 Credenciales de cuenta de servicio"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S13 Credenciales de cuenta de servicio",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "0b612671-b330-450b-a590-773f72ff608d",
+            "zIndex": 28,
+            "source": {
+              "cell": "124ecdc5-b9f6-4995-99b5-e214cec4edcb"
+            },
+            "target": {
+              "cell": "2acc4eed-55d1-4a46-ad81-e807942a62d2"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S14 Eventos de seguridad"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S14 Eventos de seguridad",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "84aff180-d599-425f-8f5c-7846ff96ece6",
+            "zIndex": 29,
+            "source": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "target": {
+              "cell": "2acc4eed-55d1-4a46-ad81-e807942a62d2"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S15 Eventos de modificación"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S15 Eventos de modificación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "590210dd-a64c-4892-8c56-5d16237d6a1e",
+            "zIndex": 30,
+            "source": {
+              "cell": "2acc4eed-55d1-4a46-ad81-e807942a62d2"
+            },
+            "target": {
+              "cell": "083eb809-9e18-4c2f-8a94-ec463b939429"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S16 Registros de auditoría"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S16 Registros de auditoría",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "Interno",
+              "threats": []
+            }
+          },
+          {
+            "shape": "flow",
+            "id": "5256cfd8-b7c6-4697-8447-32437d2ac44c",
+            "zIndex": 31,
+            "source": {
+              "cell": "80924d84-bd2d-4dfc-9659-b05a0fd33ced"
+            },
+            "target": {
+              "cell": "3efcd779-0f8c-446c-9d26-7ad686a3e3fd"
+            },
+            "vertices": [],
+            "labels": [
+              {
+                "position": 0.5,
+                "attrs": {
+                  "text": {
+                    "text": "S17 Respuesta de la operación"
+                  }
+                }
+              }
+            ],
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "data": {
+              "type": "tm.Flow",
+              "name": "S17 Respuesta de la operación",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": true,
+              "protocol": "HTTPS",
+              "threats": []
+            }
+          }
+        ]
+      }
+    ],
+    "diagramTop": 3,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 28
   }
 }
